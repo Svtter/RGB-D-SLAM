@@ -1,6 +1,19 @@
-CMAKE_MINIMUM_REQUIRED( VERSION 2.8) # 最小的版本
+CMAKE_MINIMUM_REQUIRED( VERSION 3.1) # 最小的版本
 PROJECT( slam ) # 设定工程名
 SET( CMAKE_CXX_COMPILER "g++") # 设定编译器
+# use c++ 11
+set (CMAKE_CXX_STANDARD 11)
+
+
+find_package( OpenCV REQUIRED )
+INCLUDE_DIRECTORIES( /usr/local/include/librealsense2/)
+link_directories(  /usr/local/lib )
+
+find_package(realsense2)
+
+
+# new: cmake3 中需要使用如下代码保证行为
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 
 # 设定可执行二进制文件的目录
 SET( EXECUTEABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
