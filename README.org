@@ -1,0 +1,9 @@
+#+TITLE: SLAM-practise
+#+AUTHOR: svtter
+#+OPTION: toc:2
+
+learn SLAM.
+
+** refer
+
+- [[http://www.cnblogs.com/gaoxiang12/p/4652478.html][一起做RGB-D SLAM]]
